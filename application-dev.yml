@@ -2,9 +2,9 @@
 spring:
   datasource:
     name: srm
-    url: jdbc:mysql://120.92.190.195:13306/nfsrm?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=round&transformedBitIsBoolean=true 
-    username: nfsrm
-    password: nfsrm
+    url: jdbc:mysql:/192.168.99.100:3306/nfsrm?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=round&transformedBitIsBoolean=true 
+    username: root
+    password: 123456
     driver-class-name: com.mysql.jdbc.Driver
     # 使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
