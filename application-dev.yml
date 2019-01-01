@@ -1,8 +1,8 @@
 #开发配置
 spring:
   datasource:
-    name: srm
-    url: jdbc:mysql://119.3.25.215:11011/nfsrm?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=round&transformedBitIsBoolean=true 
+    name: nfsrm
+    jdbc-url: jdbc:mysql://119.3.25.215:11011/nfsrm?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=round&transformedBitIsBoolean=true
     username: nfsrm
     password: nfsrm
     driver-class-name: com.mysql.jdbc.Driver
@@ -21,3 +21,24 @@ spring:
     testOnReturn: false
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
+    db2:
+      name: nf_colipu_midd
+      jdbc-url: jdbc:mysql://119.3.25.215:11011/nf_colipu_midd?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=round&transformedBitIsBoolean=true
+      username: nf_colipu_midd
+      password: nf_colipu_midd
+      driver-class-name: com.mysql.jdbc.Driver
+      # 使用druid数据源
+      type: com.alibaba.druid.pool.DruidDataSource
+      filters: stat
+      maxActive: 50
+      initialSize: 1
+      maxWait: 60000
+      minIdle: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
